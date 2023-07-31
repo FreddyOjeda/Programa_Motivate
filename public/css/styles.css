@@ -15,7 +15,7 @@ html, body{
     justify-content: end;
     height: 777px;
 
-    background-image: url('http://localhost/Programa_Motivate/public/images/img_login.png');
+    background-image: url('../images/img_login.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -67,9 +67,4 @@ html, body{
     background-color: #1507AC;
     color: white;
     width: 100%;
-}
-
-.im2{
-    position: fixed;
-    bottom: 0;
 }

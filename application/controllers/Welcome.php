@@ -20,10 +20,20 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->helper('url');
-
 		$this->load->view('main/header');
 		$this->load->view('welcome_message');
 		$this->load->view('main/footer');
+	}
+
+	public function login(){
+		$cedula=$this->input->post('cedula');
+		$login = $this->Programa_motivate_model->login($cedula);
+		if($login){
+			$userLogin = array(
+				'logueado' => TRUE,
+				//'idUser' => $login[0]->id_usuario,
+			);
+			$this->session->set_userdata($userLogin);
+		}
 	}
 }

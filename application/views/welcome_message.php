@@ -7,12 +7,14 @@
 			<p>Tu participación fortalece nuestro equipo y tu seguridad</p>
 		</div>
 	</div>
-	<div class="col-lg-5 p-4 login-right text-center">
-		<img src="http://localhost/Programa_Motivate/public/images/logo.png" alt="Logo_Motivate">
+	<div class="col-lg-5 p-4 login-right text-center d-flex flex-column justify-content-between">
+		<img src="<?= base_url() ?>public/images/logo.png" alt="Logo_Motivate">
 		<h1>Ingresar</h1>
 		<p>Ingresa tu número de documento y valida tu puntuación en Motivate.</p>
-		<input type="text" class="form-control mb-4" placeholder="Ej. 10210215515">
-		<button class="btn btn-lg btn-block">Ingresar</button>
-		<img class="im2" src="http://localhost/Programa_Motivate/public/images/empresas.png" alt="logo_empresas">
+		<form action="<?= base_url() ?>Welcome/login" method="POST">
+			<input type="text" class="form-control mb-4" name="cedula" placeholder="Ej. 10210215515">
+			<button class="btn btn-lg btn-block">Ingresar</button>
+		</form>
+		<img src="<?= base_url() ?>public/images/empresas.png" alt="logo_empresas">
 	</div>
 </div>
