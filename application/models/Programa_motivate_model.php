@@ -12,7 +12,7 @@ class Programa_motivate_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->where('cedula', $cedula);
-        $query = $this->db->get('T_USUARIO');
+        $query = $this->db->get('colaborador');
 
         if ($query->num_rows() > 0) {
             return $query->result();

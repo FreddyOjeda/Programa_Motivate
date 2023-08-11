@@ -1,23 +1,15 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends CI_Controller
+{
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Programa_motivate_model');
+	}
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/userguide3/general/urls.html
-	 */
+
 	public function index()
 	{
 		$this->load->view('main/header');
@@ -25,15 +17,36 @@ class Welcome extends CI_Controller {
 		$this->load->view('main/footer');
 	}
 
-	public function login(){
-		$cedula=$this->input->post('cedula');
+	public function login()
+	{
+		$cedula = $this->input->post('cedula');
 		$login = $this->Programa_motivate_model->login($cedula);
-		if($login){
+		if ($login) {
 			$userLogin = array(
 				'logueado' => TRUE,
-				//'idUser' => $login[0]->id_usuario,
+				'idUser' => $login[0]->id_usuario,
+				'nombre' => $login[0]->nombre,
+				'apellido' => $login[0]->apellido,
 			);
 			$this->session->set_userdata($userLogin);
+			redirect('Welcome/main');
 		}
+	}
+
+	public function logout()
+	{
+		$userLogin = array(
+			'logueado' => FALSE,
+		);
+
+		$this->session->set_userdata($userLogin);
+		redirect('/');
+	}
+
+	public function main()
+	{
+		$this->load->view('main/header');
+		$this->load->view('main');
+		$this->load->view('main/footer');
 	}
 }
