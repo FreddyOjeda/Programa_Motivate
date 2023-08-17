@@ -9,7 +9,11 @@
                 </p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mt-4 my-auto">
-                <h5><span class="puntos"> <img src="<?= base_url() ?>public/images/icons/start.png" alt=""> 70 Puntos</span></h5>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-puntos puntos parpadea" data-toggle="modal" data-target="#exampleModal">
+                    <img class="img-fluid" src="<?= base_url() ?>public/images/icons/start.png" alt=""> <strong> 70 Puntos</strong>
+                </button>
+
             </div>
         </div>
 
@@ -144,10 +148,7 @@
             <?php } ?>
         </div>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
-        </button>
+
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
