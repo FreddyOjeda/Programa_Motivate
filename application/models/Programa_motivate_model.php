@@ -20,4 +20,16 @@ class Programa_motivate_model extends CI_Model
             return false;
         }
     }
+
+    public function actividades()
+    {
+        $this->db->select('*');
+        $query = $this->db->get('actividades');
+
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return false;
+        }
+    }
 }

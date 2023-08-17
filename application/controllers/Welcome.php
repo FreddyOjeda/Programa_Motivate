@@ -12,6 +12,7 @@ class Welcome extends CI_Controller
 
 	public function index()
 	{
+		
 		$this->load->view('main/header');
 		$this->load->view('welcome_message');
 		$this->load->view('main/footer');
@@ -45,8 +46,9 @@ class Welcome extends CI_Controller
 
 	public function main()
 	{
+		$result['actividades'] = $this->Programa_motivate_model->actividades();
 		$this->load->view('main/header');
-		$this->load->view('main');
+		$this->load->view('main', $result);
 		$this->load->view('main/footer');
 	}
 }
