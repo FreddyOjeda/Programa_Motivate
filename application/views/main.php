@@ -183,34 +183,47 @@
                                     </ul>
 
                                 </div>
+
                                 <div class="carousel-item">
                                     <h5><strong>Premios a Otorgar</strong></h5>
                                     <p>En cada semestre, se premiara a los cinco colaboradores que obtuvieron mayores puntajes</p>
-                                    <div class="text-center">
-                                        <h3>PRIMER PUESTO <br> 1 día de trabajo libre <br> personas a premiar dos por semestre </h3>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="text-center">
-                                        <h3>SEGUNDO PUESTO <br> 1 bono por $50.000 COP de crepes & Waffles <br> personas a premiar dos por semestre </h3>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="text-center">
-                                        <h3>TERCER PUESTO <br> Canasta de frutas <br> personas a premiar dos por semestre </h3>
-                                    </div>
-                                </div>
+                                    <div class="container">
+                                        <div class="row  pl-sanciones">
+                                            <div class="col-6  my-auto">
+                                                <h4 class="text-100">100 puntos</h4>
+                                                <p>Llamado de atención verbal del líder y del área de SSTA</p>
+                                            </div>
+                                            <div class="col-6 text-left">
+                                                <img class="img-fluid" src="<?= base_url() ?>public/images/sanciones/100.png" alt="">
+                                            </div>
 
-                                <div class="carousel-item">
-                                    <div class="text-center">
-                                        <h3>CUARTO PUESTO <br> Bono de Falabella <br> personas a premiar dos por semestre </h3>
-                                    </div>
-                                </div>
+                                            <div class="col-6  my-auto">
+                                                <h4 class="text-70">70 puntos</h4>
+                                                <p>Descargos</p>
+                                            </div>
+                                            <div class="col-6 ">
+                                                <img class="img-fluid" src="<?= base_url() ?>public/images/sanciones/70.png" alt="">
+                                            </div>
 
-                                <div class="carousel-item">
-                                    <div class="text-center">
-                                        <h3>QUINTO PUESTO <br> Bono de Exito <br> personas a premiar dos por semestre </h3>
+                                            <div class="col-6 my-auto">
+                                                <h4 class="text-60">60 puntos</h4>
+                                                <p>Llamado de atención por escrito</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <img class="img-fluid" src="<?= base_url() ?>public/images/sanciones/60.png" alt="">
+                                            </div>
+
+                                            <div class="col-6  my-auto">
+                                                <h4 class="text-40">40 puntos</h4>
+                                                <p>Sanción</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <img class="img-fluid" src="<?= base_url() ?>public/images/sanciones/40.png" alt="">
+                                            </div>
+
+                                        </div>
                                     </div>
+
                                 </div>
 
                                 <div class="carousel-item">
