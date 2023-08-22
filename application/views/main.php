@@ -126,7 +126,7 @@
         <div class="row">
             <?php if ($actividades) { ?>
                 <?php foreach ($actividades as $a) { ?>
-                    <div class="col-lg-2 p-3">
+                    <div class="col-lg-3 p-3">
                         <div class="card my-auto actividad">
                             <div class="card-body">
                                 <div class="container">
@@ -138,8 +138,9 @@
                                             <h5>20 puntos</h5>
                                         </div>
                                     </div>
-                                    <p><?= substr($a->nombre, 0, 18);  ?></p>
-                                    <a href=""> Ver Detalle > </a>
+                                    <!-- <p><?= substr($a->nombre, 0, 18);  ?></p> -->
+                                    <p><?= $a->nombre  ?></p>
+                                    <a href="<?=base_url()?>welcome/activity/<?=$a->idactividades?>"> Ver Detalle > </a>
                                 </div>
                             </div>
                         </div>

@@ -25,7 +25,7 @@ class Welcome extends CI_Controller
 		if ($login) {
 			$userLogin = array(
 				'logueado' => TRUE,
-				'idUser' => $login[0]->id_usuario,
+				'idUser' => $login[0]->idcolaborador,
 				'nombre' => $login[0]->nombre,
 				'apellido' => $login[0]->apellido,
 			);
@@ -54,7 +54,9 @@ class Welcome extends CI_Controller
 
 	public function activity($id)
 	{
-		$result['$id']=$id;
+		$userID = $this->session->userdata('idUser');
+		$result['detalleActividad'] = $this->Programa_motivate_model->actividadesColaborador($userID,$id);
+		$result['nombreActividad'] = $this->Programa_motivate_model->nombreActividad($id);
 		$this->load->view('main/header');
 		$this->load->view('activity', $result);
 		$this->load->view('main/footer');
