@@ -3,15 +3,19 @@
 
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
-                <h3 class="nombre_usuario">Hola, <?= $this->session->userdata('nombre') ?> <?= $this->session->userdata('apellido') ?></h3>
+                <h3 class="nombre_usuario">Hola <?= $this->session->userdata('nombre') ?> <?= $this->session->userdata('apellido') ?>, Bienvenid@</h3>
                 <p> <?php date_default_timezone_set("America/Bogota") ?>
                     <?= date('Y-m-d') ?>
                 </p>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 mt-4 my-auto">
+            <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-puntos puntos parpadea" data-toggle="modal" data-target="#exampleModal">
-                    <img class="img-fluid" src="<?= base_url() ?>public/images/icons/start.png" alt=""> <strong> 70 Puntos</strong>
+                    <?php if ($puntuacion) { ?>
+                        <?php foreach ($puntuacion as $a) { ?>
+                            <img class="img-fluid" src="<?= base_url() ?>public/images/icons/start.png" alt=""> <strong> <?= $a->puntuacion ?> Puntos</strong>
+                        <?php } ?>
+                    <?php } ?>
                 </button>
 
             </div>
@@ -22,98 +26,39 @@
                 <h3><strong>Clasificación</strong></h3>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-lg-1 col-md-1 col-sm-12"> </div>
-            <div class="col-lg-2 col-md-2 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row my-auto">
-                                <div class="col-2">
-                                    <h1>1</h1>
+            <?php if ($top) { ?>
+                <?php
+                $posicion = 1;
+                foreach ($top as $t) { ?>
+                    <div class="col-lg-4 col-md-2 col-sm-12 mb-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row my-auto">
+                                        <div class="col-4 text-center">
+                                            <?php if ($posicion==1) { ?>
+                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto1.png" alt="" class="img">
+                                            <?php } else if ($posicion==2) { ?>
+                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto2.png" alt="" class="img">
+                                            <?php } else if ($posicion==3) { ?>
+                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto3.png" alt="" class="img">
+                                            <?php } else { ?>
+                                                <h1><?= $posicion ?></h1>
+                                            <?php } ?>
+                                        </div>
+                                        <div class="col-8 d-flex align-items-center">
+                                            <h4> <?= $t->nombre ?> <?= $t->apellido ?></h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-10">
-                                    <h4> Jazmin Benavides</h4>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row my-auto">
-                                <div class="col-2">
-                                    <h1>2</h1>
-                                </div>
-                                <div class="col-10">
-                                    <h4> Luisa Cuaspud</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row my-auto">
-                                <div class="col-2">
-                                    <h1>3</h1>
-                                </div>
-                                <div class="col-10">
-                                    <h4> Juan David Vega</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row my-auto">
-                                <div class="col-2">
-                                    <h1>4</h1>
-                                </div>
-                                <div class="col-10">
-                                    <h4> Roger Romero</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row my-auto">
-                                <div class="col-2">
-                                    <h1>5</h1>
-                                </div>
-                                <div class="col-10">
-                                    <h4> Ingrid Paola Diaz</h4>
-                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-            </div>
-            <div class="col-lg-1 col-md-1 col-sm-12"> </div>
+                    <?php $posicion++; ?>
+                <?php } ?>
+            <?php } ?>
         </div>
 
         <div class="row">
@@ -140,7 +85,7 @@
                                     </div>
                                     <!-- <p><?= substr($a->nombre, 0, 18);  ?></p> -->
                                     <p><?= $a->nombre  ?></p>
-                                    <a href="<?=base_url()?>welcome/activity/<?=$a->idactividades?>"> Ver Detalle > </a>
+                                    <a href="<?= base_url() ?>welcome/activity/<?= $a->idactividades ?>"> Ver Detalle > </a>
                                 </div>
                             </div>
                         </div>
