@@ -7,8 +7,8 @@
                 <?php } ?>
             <?php } ?>
             <div class="col-lg-12">
-                <table class="table">
-                    <thead>
+                <table class="table table-striped">
+                    <thead class="thead-dark">
                         <tr>
                             <th>Nombre Capacitacion</th>
                             <th>Fecha</th>

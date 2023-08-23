@@ -31,24 +31,26 @@
                 <?php
                 $posicion = 1;
                 foreach ($top as $t) { ?>
-                    <div class="col-lg-4 col-md-2 col-sm-12 mb-2">
+                    <div class="col-lg-3 col-md-2 col-sm-12 mb-2">
                         <div class="card">
                             <div class="card-body">
                                 <div class="container">
                                     <div class="row my-auto">
                                         <div class="col-4 text-center">
                                             <?php if ($posicion==1) { ?>
-                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto1.png" alt="" class="img">
+                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto1.png" alt="" class="img-fluid">
                                             <?php } else if ($posicion==2) { ?>
-                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto2.png" alt="" class="img">
+                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto2.png" alt="" class="img-fluid">
                                             <?php } else if ($posicion==3) { ?>
-                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto3.png" alt="" class="img">
+                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto3.png" alt="" class="img-fluid">
+                                            <?php } else if ($posicion==4) { ?>
+                                                <img src="<?= base_url() ?>public/images/puntuacion/medal2.png" alt="" class="img-fluid">
                                             <?php } else { ?>
-                                                <h1><?= $posicion ?></h1>
+                                                <img src="<?= base_url() ?>public/images/puntuacion/medal.png" alt="" class="img-fluid">
                                             <?php } ?>
                                         </div>
                                         <div class="col-8 d-flex align-items-center">
-                                            <h4> <?= $t->nombre ?> <?= $t->apellido ?></h4>
+                                            <h6> <?= $t->nombre ?> <?= $t->apellido ?></h6>
                                         </div>
                                     </div>
                                 </div>
