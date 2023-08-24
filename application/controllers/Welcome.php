@@ -28,6 +28,7 @@ class Welcome extends CI_Controller
 				'idUser' => $login[0]->idcolaborador,
 				'nombre' => $login[0]->nombre,
 				'apellido' => $login[0]->apellido,
+				'cargo' => $login[0]->cargo,
 			);
 			$this->session->set_userdata($userLogin);
 			redirect('Welcome/main');

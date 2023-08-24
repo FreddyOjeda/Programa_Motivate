@@ -9,6 +9,12 @@
         
         .bg-motivate {
             background-image: linear-gradient(to left right, #ebe2f7, #aaa2ec);
+            color: #1507AC;
+        }
+
+        .dropdownUser{
+            background-image: linear-gradient(to left right, #ebe2f7, #aaa2ec);
+            color: #1507AC;
         }
         
         .login {

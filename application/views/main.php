@@ -26,35 +26,32 @@
                 <h3><strong>Clasificación</strong></h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row visibleDesktop">
             <?php if ($top) { ?>
                 <?php
                 $posicion = 1;
                 foreach ($top as $t) { ?>
-                    <div class="col-lg-3 col-md-2 col-sm-12 mb-2">
+                    <div class="col-lg-3 col-md-3 col-sm-12 mb-2">
                         <div class="card">
                             <div class="card-body">
-                                <div class="container">
-                                    <div class="row my-auto">
-                                        <div class="col-4 text-center">
-                                            <?php if ($posicion==1) { ?>
-                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto1.png" alt="" class="img-fluid">
-                                            <?php } else if ($posicion==2) { ?>
-                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto2.png" alt="" class="img-fluid">
-                                            <?php } else if ($posicion==3) { ?>
-                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto3.png" alt="" class="img-fluid">
-                                            <?php } else if ($posicion==4) { ?>
-                                                <img src="<?= base_url() ?>public/images/puntuacion/medal2.png" alt="" class="img-fluid">
-                                            <?php } else { ?>
-                                                <img src="<?= base_url() ?>public/images/puntuacion/medal.png" alt="" class="img-fluid">
-                                            <?php } ?>
-                                        </div>
-                                        <div class="col-8 d-flex align-items-center">
-                                            <h6> <?= $t->nombre ?> <?= $t->apellido ?></h6>
-                                        </div>
+                                <div class="row my-auto">
+                                    <div class="col-4 text-center">
+                                        <?php if ($posicion == 1) { ?>
+                                            <img src="<?= base_url() ?>public/images/puntuacion/puesto1.png" alt="" class="img-fluid">
+                                        <?php } else if ($posicion == 2) { ?>
+                                            <img src="<?= base_url() ?>public/images/puntuacion/puesto2.png" alt="" class="img-fluid">
+                                        <?php } else if ($posicion == 3) { ?>
+                                            <img src="<?= base_url() ?>public/images/puntuacion/puesto3.png" alt="" class="img-fluid">
+                                        <?php } else if ($posicion == 4) { ?>
+                                            <img src="<?= base_url() ?>public/images/puntuacion/meda.png" alt="" class="img-fluid">
+                                        <?php } else { ?>
+                                            <img src="<?= base_url() ?>public/images/puntuacion/meda2.png" alt="" class="img-fluid">
+                                        <?php } ?>
+                                    </div>
+                                    <div class="col-8 d-flex align-items-center">
+                                        <h6> <?= $t->nombre ?> <?= $t->apellido ?></h6>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -62,7 +59,56 @@
                 <?php } ?>
             <?php } ?>
         </div>
-
+        <div class="row visibleMobile">
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h1>Clasificacion 5 mejores</h1>
+                        </div>
+                        <?php if ($top) { ?>
+                            <?php
+                            $posicion = 1;
+                            foreach ($top as $t) { ?>
+                                <div class="carousel-item">
+                                    <div class="col-lg-3 col-md-3 col-sm-12 mb-2">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row my-auto">
+                                                    <div class="col-4 text-center">
+                                                        <?php if ($posicion == 1) { ?>
+                                                            <img src="<?= base_url() ?>public/images/puntuacion/puesto1.png" alt="" class="img-fluid">
+                                                        <?php } else if ($posicion == 2) { ?>
+                                                            <img src="<?= base_url() ?>public/images/puntuacion/puesto2.png" alt="" class="img-fluid">
+                                                        <?php } else if ($posicion == 3) { ?>
+                                                            <img src="<?= base_url() ?>public/images/puntuacion/puesto3.png" alt="" class="img-fluid">
+                                                        <?php } else if ($posicion == 4) { ?>
+                                                            <img src="<?= base_url() ?>public/images/puntuacion/meda.png" alt="" class="img-fluid">
+                                                        <?php } else { ?>
+                                                            <img src="<?= base_url() ?>public/images/puntuacion/meda2.png" alt="" class="img-fluid">
+                                                        <?php } ?>
+                                                    </div>
+                                                    <div class="col-8 d-flex align-items-center">
+                                                        <h6> <?= $t->nombre ?> <?= $t->apellido ?></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php $posicion++; ?>
+                            <?php } ?>
+                        <?php } ?>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-12 p-4">
                 <h3><strong>Actividades</strong></h3>

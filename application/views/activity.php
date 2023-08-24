@@ -1,12 +1,12 @@
 <?php if ($this->session->userdata('logueado') == TRUE) { ?>
-    <div class="container-fluid">
+    <div class="container-fluid header">
         <div class="row">
             <?php if ($nombreActividad) { ?>
                 <?php foreach ($nombreActividad as $a) { ?>
                     <h3><?=$a->nombre?></h3>
                 <?php } ?>
             <?php } ?>
-            <div class="col-lg-12">
+            <div class="col-lg-12 p-2">
                 <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
