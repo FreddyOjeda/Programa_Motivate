@@ -6,17 +6,22 @@
             margin: 0;
             overflow-y: auto;
         }
-        
+
         .bg-motivate {
             background-image: linear-gradient(to left right, #ebe2f7, #aaa2ec);
             color: #1507AC;
         }
 
-        .dropdownUser{
+        .dropdownUser {
             background-image: linear-gradient(to left right, #ebe2f7, #aaa2ec);
             color: #1507AC;
         }
-        
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            color: #A9A9A9;
+        }
+
         .login {
             background-image: linear-gradient(to top right, #ebe2f7, #aaa2ec);
             background-repeat: no-repeat;
@@ -24,7 +29,7 @@
             background-position: center;
             background-size: 100% 100%;
         }
-        
+
         .login-left {
             color: rgb(255, 255, 255);
             text-align: left;
@@ -39,7 +44,7 @@
             background-position: center;
             border-radius: 5%;
         }
-        
+
         .login-left img {
             position: absolute;
             top: 0;
@@ -48,79 +53,79 @@
             height: 100%;
             z-index: -1;
         }
-        
+
         .login-left h1 {
             font-size: 64px;
             font-weight: 900;
         }
-        
+
         .login-left h2 {
             font-size: 36px;
             font-weight: 900;
             text-align: right;
         }
-        
+
         .login-left span {
             font-size: 24px;
         }
-        
+
         .login-left p {
             color: #6BAEF6;
         }
-        
+
         .login-right {
             line-height: 1.6;
         }
-        
+
         .login-right h1 {
             font-size: 40px;
             font-weight: 700;
         }
-        
+
         .login-right h1,
         p {
             text-align: left;
             color: #1507AC;
         }
-        
+
         .login-right button {
             background-color: #1507AC;
             color: white;
             width: 100%;
         }
-        
+
         .img-fluid-logo {
             height: auto;
             width: 30%;
         }
-        
+
         .visibleMobile {
             display: none;
         }
-        
+
         .nombre_usuario {
             color: #1507AC;
             font-weight: 700;
         }
-        
+
         .puntos {
             background-color: #ffffff;
             padding: 5px;
             border-radius: 20px;
         }
-        
+
         .actividad {
             background-color: #EAE8FF;
         }
-        
+
         .actividad :hover {
             border-color: #1507AC;
         }
-        
+
         a {
             text-decoration: none;
         }
-        
+
         .text-100 {
             color: #00C738;
             font-family: Poppins;
@@ -128,7 +133,7 @@
             font-style: normal;
             font-weight: 700;
         }
-        
+
         .text-70 {
             color: #FFE500;
             font-family: Poppins;
@@ -136,7 +141,7 @@
             font-style: normal;
             font-weight: 700;
         }
-        
+
         .text-60 {
             color: #FF8A00;
             font-family: Poppins;
@@ -145,7 +150,7 @@
             font-weight: 700;
             line-height: 48px
         }
-        
+
         .text-40 {
             color: #F00;
             font-family: Poppins;
@@ -153,12 +158,12 @@
             font-style: normal;
             font-weight: 700;
         }
-        
+
         .pl-sanciones {
             padding-top: 10px;
             padding-left: 25%;
         }
-        
+
         .parpadea {
             animation-name: parpadeo;
             animation-duration: 1s;
@@ -169,47 +174,54 @@
             -webkit-animation-timing-function: linear;
             -webkit-animation-iteration-count: infinite;
         }
-        
+
         @-moz-keyframes parpadeo {
             0% {
                 opacity: 1.0;
             }
+
             50% {
                 opacity: 0.0;
             }
+
             100% {
                 opacity: 1.0;
             }
         }
-        
+
         @-webkit-keyframes parpadeo {
             0% {
                 opacity: 1.0;
             }
+
             50% {
                 opacity: 0.0;
             }
+
             100% {
                 opacity: 1.0;
             }
         }
-        
+
         @keyframes parpadeo {
             0% {
                 opacity: 1.0;
             }
+
             50% {
                 opacity: 0.0;
             }
+
             100% {
                 opacity: 1.0;
             }
         }
-        
+
         @media (max-width: 768px) {
             .visibleDesktop {
                 display: none;
             }
+
             .visibleMobile {
                 display: block;
             }
