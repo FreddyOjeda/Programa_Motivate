@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/Programa_Motivate/';
+//$config['base_url'] = 'https://68d1-186-114-127-107.ngrok-free.app/Programa_Motivate/';
 
 /*
 |--------------------------------------------------------------------------
