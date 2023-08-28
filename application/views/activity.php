@@ -9,7 +9,7 @@
             <div class="col-lg-12 p-2">
                 <div class="card">
                     <div class="card-body">
-                        <table class="table table-striped">
+                        <table class="table table-striped" id="table_activity">
                             <thead class="thead-dark">
                                 <tr>
                                     <th>Nombre Capacitacion</th>
