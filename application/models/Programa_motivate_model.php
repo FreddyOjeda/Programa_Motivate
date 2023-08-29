@@ -38,7 +38,8 @@ class Programa_motivate_model extends CI_Model
         $this->db->select('*');
         $this->db->where('idColaborador', $idColaborador);
         $this->db->where('idActividad', $idActividad);
-        $query = $this->db->get('puntuacion');
+        $this->db->join('actividades a', 'a.idactividades = p.idActividad');
+        $query = $this->db->get('puntuacion p');
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {
@@ -79,10 +80,27 @@ class Programa_motivate_model extends CI_Model
         }
     }
 
-    public function puntosColaborador($idColaborador){
+    public function puntosColaborador($idColaborador)
+    {
         $this->db->select_sum('puntos', 'puntuacion');
         $this->db->where('idColaborador', $idColaborador);
         $query = $this->db->get('puntuacion');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return false;
+        }
+    }
+
+    public function puntosActividadColaborador($idColaborador)
+    {
+        $this->db->select('a.idActividades,a.nombre,a.imagen,a.idactividades');
+        $this->db->select_sum('puntos', 'puntuacion');
+        $this->db->join('actividades a', 'a.idactividades = p.idActividad');
+        $this->db->where('idColaborador', $idColaborador);
+        $this->db->group_by('p.idActividad');
+        $this->db->order_by('idActividad', 'asc');
+        $query = $this->db->get('puntuacion p');
         if ($query->num_rows() > 0) {
             return $query->result();
         } else {

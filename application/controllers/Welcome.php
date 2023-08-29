@@ -47,21 +47,67 @@ class Welcome extends CI_Controller
 
 	public function main()
 	{
+
+		date_default_timezone_set("America/Bogota");
+		$date = date('H');
+		$mensajeBienvenida = "";
+
+		$nombres = $this->session->userdata('nombre');
+		$primerNombre = explode(" ", $nombres);
+		$nombre = $primerNombre[0];
+
+
+
+		if ($date >= "00" && $date <= "11") {
+			$mensajeBienvenida = "Buenos días";
+		} elseif ($date >= "12" && $date <= "18") {
+			$mensajeBienvenida = "Buenas tardes";
+		} else {
+			$mensajeBienvenida = "Buenas noches";
+		}
+
+		$result['mensajeBienvenida'] = $mensajeBienvenida;
+		$result['nombre'] = $nombre;
+
+
 		$userID = $this->session->userdata('idUser');
 		$result['actividades'] = $this->Programa_motivate_model->actividades();
 		$result['top'] = $this->Programa_motivate_model->top();
 		$result['puntuacion'] = $this->Programa_motivate_model->puntosColaborador($userID);
-		$this->load->view('main/header');
+		$result['puntosColaborador'] = $this->Programa_motivate_model->puntosActividadColaborador($userID);
+
+		$this->load->view('main/header', $result);
 		$this->load->view('main', $result);
 		$this->load->view('main/footer');
 	}
 
 	public function activity($id)
 	{
+		date_default_timezone_set("America/Bogota");
+		$date = date('H');
+		$mensajeBienvenida = "";
+
+		$nombres = $this->session->userdata('nombre');
+		$primerNombre = explode(" ", $nombres);
+		$nombre = $primerNombre[0];
+
+
+
+		if ($date >= "00" && $date <= "11") {
+			$mensajeBienvenida = "Buenos días";
+		} elseif ($date >= "12" && $date <= "18") {
+			$mensajeBienvenida = "Buenas tardes";
+		} else {
+			$mensajeBienvenida = "Buenas noches";
+		}
+
+		$result['mensajeBienvenida'] = $mensajeBienvenida;
+		$result['nombre'] = $nombre;
 		$userID = $this->session->userdata('idUser');
-		$result['detalleActividad'] = $this->Programa_motivate_model->actividadesColaborador($userID,$id);
+		$result['detalleActividad'] = $this->Programa_motivate_model->actividadesColaborador($userID, $id);
 		$result['nombreActividad'] = $this->Programa_motivate_model->nombreActividad($id);
-		$this->load->view('main/header');
+
+		$this->load->view('main/header', $result);
 		$this->load->view('activity', $result);
 		$this->load->view('main/footer');
 	}
