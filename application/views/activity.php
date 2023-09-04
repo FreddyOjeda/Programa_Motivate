@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     <?php } else { ?>
-                        <div class="col-lg-6 col-md-6 col-sm-12 p-2">
+                        <div class="col-lg-9 col-md-9 col-sm-12 p-2">
                             <div class="card">
                                 <div class="card-body">
                                     <table class="table table-hover table-bordered text-center" id="table_activity">
@@ -63,8 +63,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 my-auto text-center my-auto">
-                            <div class="card">
+                        <div class="col-lg-3 col-md-3 col-sm-12 my-auto text-center my-auto">
+                            <div class="card p-4">
                                 <div class="card-body">
                                     <img src="<?= base_url() ?>public/images/qr/<?= $a->qr ?>" alt="">
 
