@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'programamotivate',
+	'hostname' => '34.121.241.100',
+	'username' => 'userprogramamotivate',
+	'password' => '$PROGRAMA_motivate2023**%',
+	'database' => 'programa_motivate',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
