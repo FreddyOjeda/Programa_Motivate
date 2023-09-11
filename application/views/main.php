@@ -5,7 +5,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                 <h3 class="nombre_usuario">Bienvenid@ <?= $this->session->userdata('nombre') ?> <?= $this->session->userdata('apellido') ?></h3>
                 <p> <?php date_default_timezone_set("America/Bogota") ?>
-                    <?= date('Y-m-d') ?>
+                    <?= date('d-m-Y') ?>
                 </p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mt-4 text-center my-auto">
@@ -41,8 +41,13 @@
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
-                                            <h5 class="card-title"><?= $t->nombre ?> <?= $t->apellido ?></h5>
-                                            <h6 class="card-text">Puntos: <strong><?= $t->puntuacion ?></strong></h6>
+                                            <h5 class="card-title">
+                                                <?php $nombre = explode(' ', $t->nombre); ?>
+                                                <?php $primernombre = $nombre[0] ?>
+                                                <?php $apellido = explode(' ', $t->apellido); ?>
+                                                <?php $primerapellido = $apellido[0] ?>
+                                                <h5><?= $primernombre ?> <br> <?= $primerapellido ?></h5>
+                                                <h6 class="card-text">Puntos: <strong><?= $t->puntuacion ?></strong></h6>
                                         </div>
 
                                     </div>
@@ -58,7 +63,11 @@
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
-                                            <h5 class="card-title"><?= $t->nombre ?> <?= $t->apellido ?></h5>
+                                            <?php $nombre = explode(' ', $t->nombre); ?>
+                                            <?php $primernombre = $nombre[0] ?>
+                                            <?php $apellido = explode(' ', $t->apellido); ?>
+                                            <?php $primerapellido = $apellido[0] ?>
+                                            <h5> <?= $primernombre ?> <br> <?= $primerapellido ?></h5>
                                             <h6 class="card-text">Puntos: <strong><?= $t->puntuacion ?></strong></h6>
                                         </div>
 
@@ -75,7 +84,11 @@
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
-                                            <h5 class="card-title"><?= $t->nombre ?> <?= $t->apellido ?></h5>
+                                            <?php $nombre = explode(' ', $t->nombre); ?>
+                                            <?php $primernombre = $nombre[0] ?>
+                                            <?php $apellido = explode(' ', $t->apellido); ?>
+                                            <?php $primerapellido = $apellido[0] ?>
+                                            <h5><?= $primernombre ?> <br> <?= $primerapellido ?></h5>
                                             <h6 class="card-text">Puntos: <strong><?= $t->puntuacion ?></strong></h6>
                                         </div>
 
@@ -90,7 +103,11 @@
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
-                                            <h5 class="card-title"><?= $t->nombre ?> <?= $t->apellido ?></h5>
+                                            <?php $nombre = explode(' ', $t->nombre); ?>
+                                            <?php $primernombre = $nombre[0] ?>
+                                            <?php $apellido = explode(' ', $t->apellido); ?>
+                                            <?php $primerapellido = $apellido[0] ?>
+                                            <h5><?= $primernombre ?> <br> <?= $primerapellido ?></h5>
                                             <h6 class="card-text">Puntos: <strong><?= $t->puntuacion ?></strong></h6>
                                         </div>
 
@@ -104,7 +121,11 @@
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
-                                            <h5 class="card-title"><?= $t->nombre ?> <?= $t->apellido ?></h5>
+                                            <?php $nombre = explode(' ', $t->nombre); ?>
+                                            <?php $primernombre = $nombre[0] ?>
+                                            <?php $apellido = explode(' ', $t->apellido); ?>
+                                            <?php $primerapellido = $apellido[0] ?>
+                                            <h5><?= $primernombre ?> <br> <?= $primerapellido ?></h5>
                                             <h6 class="card-text">Puntos: <strong><?= $t->puntuacion ?></strong></h6>
                                         </div>
 

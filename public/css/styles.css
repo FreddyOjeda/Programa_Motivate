@@ -7,6 +7,8 @@ body {
     overflow-y: auto;
     min-height: 100vh;
     background-image: linear-gradient(to left right, #ebe2f7, #aaa2ec);
+    padding-left:1%;
+    padding-right:1%;
 }
 
 .bg-motivate {

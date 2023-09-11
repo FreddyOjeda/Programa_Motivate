@@ -15,7 +15,7 @@
 			<img src="<?= base_url() ?>public/images/logo.png" alt="Logo_Motivate">
 		</div>
 		<h1>Ingresar</h1>
-		<p>Ingresa tu número de documento y valida tu puntuación en Motivate.</p>
+		<p>Ingresa tu número de documento y valida tu puntuación en Motívate.</p>
 		<form action="<?= base_url() ?>Welcome/login" method="POST">
 			<input type="text" class="form-control mb-4" name="cedula" placeholder="Ej. 10210215515">
 			<button class="btn btn-lg btn-block">Ingresar</button>
