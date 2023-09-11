@@ -47,6 +47,19 @@ class Programa_motivate_model extends CI_Model
         }
     }
 
+    public function validacionActividades($idColaborador, $idActividad)
+    {
+        $this->db->select('*');
+        $this->db->where('idColaborador', $idColaborador);
+        $this->db->where('idActividad', $idActividad);
+        $query = $this->db->get('puntuacion');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return false;
+        }
+    }
+
     public function nombreActividad($idActividad)
     {
         $this->db->select('*');
@@ -106,5 +119,12 @@ class Programa_motivate_model extends CI_Model
         } else {
             return false;
         }
+    }
+
+    public function insertarActividades($id, $data)
+    {
+        $this->db->insert('puntuacion', $data);
+        $this->db->where('idColaborador', $id);
+        return true;
     }
 }

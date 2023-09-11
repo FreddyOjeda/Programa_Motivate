@@ -111,4 +111,25 @@ class Welcome extends CI_Controller
 		$this->load->view('activity', $result);
 		$this->load->view('main/footer');
 	}
+
+	public function insertarActividadesUsuario()
+	{
+		for ($id = 120; $id <= 121; $id++) {
+			for ($i = 1; $i <= 12; $i++) {
+				$search = $this->Programa_motivate_model->validacionActividades($id, $i);
+				if ($search == false) {
+					$data = array(
+						'puntos' => 0,
+						'fechaCreacion' => '0000-00-00 00:00:00',
+						'idColaborador' => $id,
+						'idActividad' => $i
+					);
+					$this->Programa_motivate_model->insertarActividades($id, $data);
+
+				}
+			}
+			echo("vamos en el: ". $id);
+		}
+
+	}
 }
