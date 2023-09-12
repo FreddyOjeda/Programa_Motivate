@@ -73,6 +73,7 @@ class Welcome extends CI_Controller
 		$userID = $this->session->userdata('idUser');
 		$result['actividades'] = $this->Programa_motivate_model->actividades();
 		$result['top'] = $this->Programa_motivate_model->top();
+		
 		$result['puntuacion'] = $this->Programa_motivate_model->puntosColaborador($userID);
 		$result['puntosColaborador'] = $this->Programa_motivate_model->puntosActividadColaborador($userID);
 
