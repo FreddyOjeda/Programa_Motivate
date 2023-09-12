@@ -440,8 +440,4 @@ body {
     .visibleMobile {
         display: block;
     }
-
-    .login{
-        color: #00C738;
-    }
 }
