@@ -37,7 +37,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-4 p-2">
-                                            <img src="<?= base_url() ?>public/images/puntuacion/puesto1.png" alt="" class="img-fluid">
+                                            <img src="<?= base_url() ?>public/images/icons/1.png" alt="" class="img-fluid">
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
@@ -59,7 +59,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-4 p-2">
-                                            <img src="<?= base_url() ?>public/images/puntuacion/puesto2.png" alt="" class="img-fluid">
+                                            <img src="<?= base_url() ?>public/images/icons/2.png" alt="" class="img-fluid">
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
@@ -80,7 +80,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-4 p-2">
-                                            <img src="<?= base_url() ?>public/images/puntuacion/puesto3.png" alt="" class="img-fluid">
+                                            <img src="<?= base_url() ?>public/images/icons/3.png" alt="" class="img-fluid">
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
@@ -99,7 +99,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-4 p-2">
-                                            <img src="<?= base_url() ?>public/images/puntuacion/meda.png" alt="" class="img-fluid">
+                                            <img src="<?= base_url() ?>public/images/icons/4.png" alt="" class="img-fluid">
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
@@ -117,7 +117,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-4 p-2">
-                                            <img src="<?= base_url() ?>public/images/puntuacion/meda2.png" alt="" class="img-fluid">
+                                            <img src="<?= base_url() ?>public/images/icons/5.png" alt="" class="img-fluid">
                                         </div>
 
                                         <div class="col-8 p-2 my-auto">
@@ -151,25 +151,30 @@
                                     <?php } else { ?>
                                         <div class="carousel-item">
                                         <?php } ?>
-                                        <div class="col-lg-3 col-md-3 col-sm-12 mb-2">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 mb-2">
                                             <div class="card">
                                                 <div class="card-body">
                                                     <div class="row my-auto">
-                                                        <div class="col-4 text-center">
+                                                        <div class="col-4 d-flex align-items-center justify-content-center">
                                                             <?php if ($posicion == 1) { ?>
-                                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto1.png" alt="" class="img-fluid">
+                                                                <img class="w-50" src="<?= base_url() ?>public/images/icons/1.png" alt="" class="img-fluid">
                                                             <?php } else if ($posicion == 2) { ?>
-                                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto2.png" alt="" class="img-fluid">
+                                                                <img class="w-50" src="<?= base_url() ?>public/images/icons/2.png" alt="" class="img-fluid">
                                                             <?php } else if ($posicion == 3) { ?>
-                                                                <img src="<?= base_url() ?>public/images/puntuacion/puesto3.png" alt="" class="img-fluid">
+                                                                <img class="w-50" src="<?= base_url() ?>public/images/icons/3.png" alt="" class="img-fluid">
                                                             <?php } else if ($posicion == 4) { ?>
-                                                                <img src="<?= base_url() ?>public/images/puntuacion/meda.png" alt="" class="img-fluid">
+                                                                <img class="w-50" src="<?= base_url() ?>public/images/icons/4.png" alt="" class="img-fluid">
                                                             <?php } else { ?>
-                                                                <img src="<?= base_url() ?>public/images/puntuacion/meda2.png" alt="" class="img-fluid">
+                                                                <img class="w-50" src="<?= base_url() ?>public/images/icons/5.png" alt="" class="img-fluid">
                                                             <?php } ?>
                                                         </div>
-                                                        <div class="col-8 d-flex align-items-center">
-                                                            <h6> <?= $t->nombre ?> <?= $t->apellido ?></h6>
+                                                        <div class="col-8 pt-5">
+                                                            <?php $nombre = explode(' ', $t->nombre); ?>
+                                                            <?php $primernombre = $nombre[0] ?>
+                                                            <?php $apellido = explode(' ', $t->apellido); ?>
+                                                            <?php $primerapellido = $apellido[0] ?>
+                                                            <h5><?= $primernombre ?> <?= $primerapellido ?></h5>
+                                                            <h6 class="card-text">Puntos: <strong><?= $t->puntuacion ?></strong></h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -200,7 +205,7 @@
                 <?php if ($puntosColaborador) { ?>
                     <?php foreach ($puntosColaborador as $a) { ?>
                         <!--?php foreach ($actividades as $a) { ?-->
-                        <div class="col-lg-2 col-md-6 col-sm-12 p-3  w-25 ">
+                        <div class="col-lg-2 col-md-6 col-sm-6 p-3  w-25 ">
                             <div class="card my-auto actividad">
                                 <div class="card-body">
                                     <div class="container">

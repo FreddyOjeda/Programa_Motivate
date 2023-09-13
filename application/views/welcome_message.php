@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row pt-5 pb-4">
-		<div class="visibleMobile text-center">
-			<img src="<?= base_url() ?>public/images/logo.png" alt="Logo_Motivate">
+		<div class="visibleMobile text-center logo-responsive">
+			<img class="logo-responsive" src="<?= base_url() ?>public/images/logo.png" alt="Logo_Motivate">
 		</div>
 		<div class="col-lg-7 login-left">
 			<div class="row p-5">
@@ -11,7 +11,7 @@
 				<p>Tu participación fortalece nuestro equipo y tu seguridad</p>
 			</div>
 		</div>
-		<div class="col-lg-5 p-5 mb-4 login-right text-center d-flex flex-column justify-content-between">
+		<div class="col-lg-5 pt-5 mb-4 login-right text-center d-flex flex-column justify-content-between">
 			<div class="visibleDesktop">
 				<img src="<?= base_url() ?>public/images/logo.png" alt="Logo_Motivate">
 			</div>
