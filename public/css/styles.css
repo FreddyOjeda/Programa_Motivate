@@ -426,7 +426,12 @@ body {
     }
 }
 
-@media only screen and (max-width: 760px) {
+.logo-responsive{
+    width: -webkit-fill-available;
+}
+
+
+@media only screen and (max-width: 980px) {
     .visibleDesktop {
         display: none;
     }
@@ -434,5 +439,4 @@ body {
     .visibleMobile {
         display: block;
     }
-
 }

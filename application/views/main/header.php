@@ -14,17 +14,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="<?= base_url() ?>public/css/styles.css">
-
 </head>
 
 <body class="login">
     <?php $mainUrl = $this->uri->segment(1); ?>
     <?php if ($mainUrl != '') { ?>
 
-        <nav class="navbar navbar-expand-lg bg-motivate navbar-light ">
+        <nav class="navbar navbar-expand-lg bg-motivate navbar-light justify-content-between">
             <a class="navbar-brand" href="<?= base_url() ?>welcome/main"><img class="img-fluid-logo" src="<?= base_url() ?>public/images/logo.png" alt="Logo Motivate"></a>
             <ul class="navbar-nav ms-auto mb-lg-0 mr-4">
-                <li class="nav-item dropdown ">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                         <img src="<?= base_url() ?>public/images/profile.png" class="img-fluid" alt="">
                         <strong> <?= $mensajeBienvenida ?>, <?= $nombre ?></strong>
