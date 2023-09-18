@@ -12,7 +12,6 @@ class Welcome extends CI_Controller
 
 	public function index()
 	{
-
 		$this->load->view('main/header');
 		$this->load->view('welcome_message');
 		$this->load->view('main/footer');
@@ -56,8 +55,6 @@ class Welcome extends CI_Controller
 		$primerNombre = explode(" ", $nombres);
 		$nombre = $primerNombre[0];
 
-
-
 		if ($date >= "00" && $date <= "11") {
 			$mensajeBienvenida = "Buenos días";
 		} elseif ($date >= "12" && $date <= "18") {
@@ -91,8 +88,6 @@ class Welcome extends CI_Controller
 		$nombres = $this->session->userdata('nombre');
 		$primerNombre = explode(" ", $nombres);
 		$nombre = $primerNombre[0];
-
-
 
 		if ($date >= "00" && $date <= "11") {
 			$mensajeBienvenida = "Buenos días";
